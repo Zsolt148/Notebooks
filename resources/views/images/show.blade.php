@@ -19,7 +19,7 @@
                                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
-                        <div class="text-xl font-medium ml-3">{{session('status')}}</div>
+                        <div class="text-xl font-medium ml-3">Sikeres képfeltöltés</div>
                     </div>
                     <div class="text-sm tracking-wide text-gray-600 dark:text-gray-200 mt-4 sm:mt-0 sm:ml-4">Köszönjük!
                     </div>
@@ -49,18 +49,24 @@
         <section class="overflow-hidden text-gray-700 body-font">
             <div class="sm:px-5 py-2 mx-auto max-w-7xl">
                 <div class="flex flex-wrap">
-                    @foreach ($images as $image)
-                        <div class="flex flex-wrap w-1/2 md:w-1/6">
-                            <div class="w-full p-1 md:p-3">
-                                <a href="{{ route('images.show', $image->id) }}">
-                                    <img alt="gallery"
-                                        class="block object-cover object-center w-full h-full rounded-lg shadow-xl"
-                                        src="{{ $image->file }}">
-                                    </a>
-                                </div>
-                            <span class="w-full text-center py-2 font-bold">{{$image->name}}</span>
+                    <div class="flex flex-wrap w-1/2">
+                        <span class="w-full text-center py-2 text-xl font-bold">{{ $image->name }}</span>
+                        <div class="w-full p-1 md:p-3">
+                            <img alt="gallery"
+                                class="block object-cover object-center w-full h-full rounded-lg shadow-xl"
+                                src="{{ '../' . $image->file }}">
                         </div>
-                    @endforeach
+                    </div>
+                    <div class="flex justify-evenly w-1/2 items-center" >
+                        <a href="{{ route('images.edit', $image) }}">
+                            <x-button class="bg-blue-400">Frissítés</x-button>
+                        </a>
+                        <form action="{{ route('images.destroy', $image) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <x-button class="bg-red-400">Törlés</x-button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

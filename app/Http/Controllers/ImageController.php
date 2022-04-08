@@ -25,6 +25,18 @@ class ImageController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Image  $image
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Image $image)
+    {
+        return view('images.show')
+            ->with('image', Image::find($image->id));
+    }
+
+    /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function create()
@@ -53,5 +65,44 @@ class ImageController extends Controller
         $image->save();
 
         return redirect()->route('images.index')->with('status', 'Sikeresen feltöltve');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Image $image)
+    {
+        return view('images.edit')
+            ->with('image', $image);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function update(Request $request, Image $image)
+    {
+
+        $request->validate([
+            "name" => "required|string|max:255",
+        ]);
+
+        $image->name = $request->name;
+        $image->save();
+
+        return redirect()->route('images.index')->with('status', 'Sikeresen frissítve!');
+    }
+
+    public function destroy(Image $image){
+        $image->delete();
+
+        return redirect()->route('images.index')->with('status', 'Sikeresen törölve.');
     }
 }

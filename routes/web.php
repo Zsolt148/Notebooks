@@ -24,7 +24,7 @@ Route::view('about-us', 'about-us')->name('about-us');
 
 Route::resource('notebooks', NotebookController::class)->except('show');
 
-Route::resource('images', ImageController::class)->only('index', 'create', 'store');
+Route::resource('images', ImageController::class)->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy');
 
 Route::resource('message', MessageController::class)->only('index', 'create', 'store');
 
