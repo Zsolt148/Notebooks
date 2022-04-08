@@ -25,6 +25,14 @@ class Notebook extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+    public function processor()
+    {
+        return $this->belongsTo(Processor::class, 'processor_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function opsystem()
     {
         return $this->belongsTo(Opsystem::class, 'opsystem_id');

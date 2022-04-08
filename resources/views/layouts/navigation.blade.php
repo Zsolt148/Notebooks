@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Kezdőlap
                     </x-nav-link>
+                    <x-nav-link :href="route('notebooks.index')" :active="request()->routeIs('notebooks*')">
+                        Laptopok
+                    </x-nav-link>
                     <x-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')">
                         Rólunk
                     </x-nav-link>
@@ -87,6 +90,9 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 Kezdőlap
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('notebooks.index')" :active="request()->routeIs('notebooks*')">
+                Laptopok
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')">
                 Rólunk

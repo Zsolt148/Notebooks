@@ -20,4 +20,12 @@ class Opsystem extends Model
     {
         return $this->hasMany(Notebook::class, 'opsystem_id');
     }
+
+    /**
+     * @return string
+     */
+    public function getNameAttribute()
+    {
+        return "{$this->os_name}";
+    }
 }

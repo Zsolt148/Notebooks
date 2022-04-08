@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\NotebookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +22,11 @@ Route::get('/', function () {
 
 Route::view('about-us', 'about-us')->name('about-us');
 
-Route::resource('images', \App\Http\Controllers\ImageController::class)->only('index', 'create', 'store');
+Route::resource('notebooks', NotebookController::class)->except('show');
 
-Route::resource('message', \App\Http\Controllers\MessageController::class)->only('index', 'create', 'store');
+Route::resource('images', ImageController::class)->only('index', 'create', 'store');
+
+Route::resource('message', MessageController::class)->only('index', 'create', 'store');
 
 //File views
 Route::get('/public/{filename}', function ($filename = '') {

@@ -21,4 +21,12 @@ class Processor extends Model
     {
         return $this->hasMany(Notebook::class, 'processor_id');
     }
+
+    /**
+     * @return string
+     */
+    public function getNameAttribute()
+    {
+        return "{$this->manufacturer} {$this->type}";
+    }
 }
