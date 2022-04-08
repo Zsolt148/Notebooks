@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "manufacturer": "AMD",
+        "type": "Athlon 64 X2 QL64"
+    },
+    {
+        "id": 4,
+        "manufacturer": "AMD",
+        "type": "Athlon TM Neo MV-40"
+    },
+    {
+        "id": 5,
+        "manufacturer": "AMD",
+        "type": "Mobil Sempron SI-40"
+    },
+    {
+        "id": 6,
+        "manufacturer": "AMD",
+        "type": "Turion64 X2 TL60"
+    },
+    {
+        "id": 7,
+        "manufacturer": "AMD",
+        "type": "Turion64 X2 TL64"
+    },
+    {
+        "id": 8,
+        "manufacturer": "AMD",
+        "type": "Turion64 X2 TL62"
+    },
+    {
+        "id": 10,
+        "manufacturer": "Intel",
+        "type": "Celeron 900"
+    },
+    {
+        "id": 12,
+        "manufacturer": "Intel",
+        "type": "Celeron Dual-Core T1600"
+    },
+    {
+        "id": 13,
+        "manufacturer": "Intel",
+        "type": "Celeron Dual-Core T1700"
+    },
+    {
+        "id": 14,
+        "manufacturer": "Intel",
+        "type": "Celeron Dual-Core T3000"
+    },
+    {
+        "id": 17,
+        "manufacturer": "Intel",
+        "type": "Celeron M 560"
+    },
+    {
+        "id": 18,
+        "manufacturer": "Intel",
+        "type": "Centrino Atom 1600"
+    },
+    {
+        "id": 19,
+        "manufacturer": "Intel",
+        "type": "Centrino Atom N270"
+    },
+    {
+        "id": 20,
+        "manufacturer": "Intel",
+        "type": "Centrino Atom N280"
+    },
+    {
+        "id": 21,
+        "manufacturer": "Intel",
+        "type": "Centrino Atom Z520"
+    },
+    {
+        "id": 22,
+        "manufacturer": "Intel",
+        "type": "Centrino Atom Z530"
+    },
+    {
+        "id": 23,
+        "manufacturer": "Intel",
+        "type": "Core Duo T3400"
+    },
+    {
+        "id": 24,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo P7350"
+    },
+    {
+        "id": 25,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo P8400"
+    },
+    {
+        "id": 26,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo P8600"
+    },
+    {
+        "id": 27,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo P8700"
+    },
+    {
+        "id": 28,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo SL9400"
+    },
+    {
+        "id": 29,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo SU7300"
+    },
+    {
+        "id": 30,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo SU9300"
+    },
+    {
+        "id": 31,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo SU9400"
+    },
+    {
+        "id": 32,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T5670"
+    },
+    {
+        "id": 34,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T5870"
+    },
+    {
+        "id": 35,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T6400"
+    },
+    {
+        "id": 36,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T6500"
+    },
+    {
+        "id": 37,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T6570"
+    },
+    {
+        "id": 38,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T6600"
+    },
+    {
+        "id": 39,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T6670"
+    },
+    {
+        "id": 40,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T7300"
+    },
+    {
+        "id": 41,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T7500"
+    },
+    {
+        "id": 42,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T8300"
+    },
+    {
+        "id": 43,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T9300"
+    },
+    {
+        "id": 44,
+        "manufacturer": "Intel",
+        "type": "Core2 Duo T9400"
+    },
+    {
+        "id": 45,
+        "manufacturer": "Intel",
+        "type": "Core2 Solo SU3500 ULV"
+    },
+    {
+        "id": 46,
+        "manufacturer": "Intel",
+        "type": "Pentium Dual Core SU4100"
+    },
+    {
+        "id": 48,
+        "manufacturer": "Intel",
+        "type": "Pentium dual-core T4200"
+    },
+    {
+        "id": 49,
+        "manufacturer": "Intel",
+        "type": "Pentium dual-core T4300"
+    },
+    {
+        "id": 51,
+        "manufacturer": "Intel",
+        "type": "Celeron M ULV723"
+    },
+    {
+        "id": 52,
+        "manufacturer": "VIA",
+        "type": "Via Nano ULV 2250"
+    },
+    {
+        "id": 53,
+        "manufacturer": "AMD",
+        "type": "Athlon 64 X2 QL65"
+    }
+]

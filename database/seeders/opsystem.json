@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "FreeDOS"
+    },
+    {
+        "id": 2,
+        "name": "Linux"
+    },
+    {
+        "id": 3,
+        "name": "Microsoft Vista Business"
+    },
+    {
+        "id": 4,
+        "name": "Microsoft Vista Home Basic HU"
+    },
+    {
+        "id": 5,
+        "name": "Microsoft Vista Home Premium"
+    },
+    {
+        "id": 6,
+        "name": "Microsoft Vista Home Premium HU"
+    },
+    {
+        "id": 7,
+        "name": "Microsoft Vista Home Premium HU notebook"
+    },
+    {
+        "id": 8,
+        "name": "nincs"
+    },
+    {
+        "id": 9,
+        "name": "Windows 7 Home Premium HU 32Bit"
+    },
+    {
+        "id": 10,
+        "name": "Windows 7 Home Premium HU 64Bit"
+    },
+    {
+        "id": 11,
+        "name": "Windows 7 Starter Edition HU"
+    },
+    {
+        "id": 12,
+        "name": "Windows XP Home Magyar"
+    }
+]
