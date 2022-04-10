@@ -62,4 +62,17 @@ class MessageController extends Controller
 
         return redirect()->back()->with('status', 'Sikeresen elküldte üzenetét!');
     }
+
+    public function update(Message $message){
+        $message->read = true;
+        $message->save();
+
+        return back()->with('status', 'Olvasottnak jelölve!');
+    }
+
+    public function destroy(Message $message){
+        $message->delete();
+
+        return back()->with('status', 'Sikeresen törölve!');
+    }
 }
