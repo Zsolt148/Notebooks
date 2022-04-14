@@ -1,8 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Galléria
-            @auth - <a href="{{ route('images.create') }}" class="text-blue-500">Új Kép feltöltése</a> @endauth
+            <a class="text-blue-500" href="{{ route('images.index') }}">Galléria</a> / {{ $image->name }}
         </h2>
     </x-slot>
 
@@ -48,13 +47,13 @@
 
         <section class="overflow-hidden text-gray-700 body-font">
             <div class="sm:px-5 py-2 mx-auto max-w-7xl">
-                <div class="flex flex-wrap">
+                <div class="flex flex-col">
                     <div class="flex flex-wrap w-1/2">
                         <span class="w-full text-center py-2 text-xl font-bold">{{ $image->name }}</span>
                         <div class="w-full p-1 md:p-3">
                             <img alt="gallery"
                                 class="block object-cover object-center w-full h-full rounded-lg shadow-xl"
-                                src="{{ '../' . $image->file }}">
+                                src="{{ \Illuminate\Support\Facades\Storage::url($image->file) }}">
                         </div>
                     </div>
                     <div class="flex justify-evenly w-1/2 items-center" >

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -33,7 +34,7 @@ class ImageController extends Controller
     public function show(Image $image)
     {
         return view('images.show')
-            ->with('image', Image::find($image->id));
+            ->with('image', $image);
     }
 
     /**
@@ -56,11 +57,9 @@ class ImageController extends Controller
             'file' => 'required|mimes:jpg,png|max:2048',
         ]);
 
-        $file = $request->file('file')->store('public');
-
         $image = new Image();
         $image->name = $request->get('name');
-        $image->file = $file;
+        $image->file = $request->file('file')->store('public');
         $image->user()->associate(auth()->user());
         $image->save();
 
@@ -100,7 +99,16 @@ class ImageController extends Controller
         return redirect()->route('images.index')->with('status', 'Sikeresen frissítve!');
     }
 
-    public function destroy(Image $image){
+    /**
+     * @param Image $image
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(Image $image)
+    {
+        if(Storage::exists($image->file)) {
+            Storage::delete($image->file);
+        }
+
         $image->delete();
 
         return redirect()->route('images.index')->with('status', 'Sikeresen törölve.');

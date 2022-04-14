@@ -1,7 +1,7 @@
 <x-app-layout>
   <x-slot name="header">
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-          <a class="text-blue-500" href="{{ route('images.index') }}">Galléria</a> / Új Kép feltöltése
+          <a class="text-blue-500" href="{{ route('images.index') }}">Galléria</a> / <a class="text-blue-500" href="{{ route('images.show', $image) }}">{{ $image->name }}</a> / Kép szerkesztése
       </h2>
   </x-slot>
 
@@ -24,7 +24,7 @@
                       <div class="mt-8">
                         <img alt="gallery"
                         class="block object-cover object-center max-h-40 rounded-lg shadow-xl"
-                        src="{{ '../../' . $image->file }}">
+                        src="{{ \Illuminate\Support\Facades\Storage::url($image->file) }}">
                       </div>
 
                       <div class="mt-8">

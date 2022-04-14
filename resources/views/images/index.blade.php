@@ -55,7 +55,7 @@
                                 <a href="{{ route('images.show', $image->id) }}">
                                     <img alt="gallery"
                                         class="block object-cover object-center w-full h-full rounded-lg shadow-xl"
-                                        src="{{ $image->file }}">
+                                        src="{{ \Illuminate\Support\Facades\Storage::url($image->file) }}">
                                     </a>
                                 </div>
                             <span class="w-full text-center py-2 font-bold">{{$image->name}}</span>
