@@ -25,8 +25,9 @@
 
 10. Run ```php artisan serve```
 
-#### Admin
-As long as the application is running local mode the developer account(s) are seeded automatically. 
+### Admin ###
+
+##### To access the CRUD operations you must login.
 
 ##### Email: admin@admin.com
 ##### Password: admin
