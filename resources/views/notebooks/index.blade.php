@@ -28,7 +28,7 @@
 
             <form action="{{ route('notebooks.index') }}" method="GET">
                 <div class="mb-6 flex w-full justify-between items-center">
-                    <input class="relative w-full px-4 py-1 rounded-md border-gray-300 dark:border-gray-600 mr-2" type="text" name="search" placeholder="Keresés"
+                    <input class="relative w-full px-4 py-1 rounded-md border-gray-300 dark:border-gray-600 mr-2" type="text" name="search" placeholder="Search"
                            value="{{ old('search', request('search')) }}"
                     />
                     <x-button type="submit" class="bg-blue-500">
