@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Laptopok
-            @auth - <a href="{{route('notebooks.create')}}" class="text-blue-500">Új laptop</a> @endauth
+            Notebooks
+            @auth - <a href="{{route('notebooks.create')}}" class="text-blue-500">New notebook</a> @endauth
         </h2>
     </x-slot>
 
@@ -32,11 +32,11 @@
                            value="{{ old('search', request('search')) }}"
                     />
                     <x-button type="submit" class="bg-blue-500">
-                        Keresés
+                        Search
                     </x-button>
                     <x-button type="button" class="bg-red ml-2">
                         <a href="{{ route('notebooks.index') }}">
-                            Törlés
+                            Reset
                         </a>
                     </x-button>
                 </div>
@@ -50,27 +50,27 @@
                         <tr class="text-left font-bold">
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    Gyártó
+                                    Manufacturer
                                 </span>
                             </th>
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    Típus
+                                    Type
                                 </span>
                             </th>
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    Kijelző
+                                    Display
                                 </span>
                             </th>
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    Memória
+                                    Memory
                                 </span>
                             </th>
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    Merevlemez
+                                    Harddrive
                                 </span>
                             </th>
                             <th class="px-6 pt-6 pb-4">
@@ -80,7 +80,7 @@
                             </th>
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    Ár
+                                    Price
                                 </span>
                             </th>
                             <th class="px-6 pt-6 pb-4">
@@ -90,17 +90,17 @@
                             </th>
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    OP. rendszer
+                                    OP system
                                 </span>
                             </th>
                             <th class="px-6 pt-6 pb-4">
                                 <span class="inline-flex w-full justify-between cursor-pointer">
-                                    Darab
+                                    Piece
                                 </span>
                             </th>
                             @auth
                                 <th class="px-6 pt-6 pb-4" colspan="2">
-                                    Admin
+                                    Actions
                                 </th>
                             @endauth
                         </tr>
@@ -175,7 +175,7 @@
                             </tr>
                         @empty
                             <div class="px-6 py-2 flex items-center focus:outline-none">
-                                Nincs a keresésnek megfelelő laptop
+                                Not found
                             </div>
                         @endforelse
                     </table>

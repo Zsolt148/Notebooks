@@ -13,7 +13,7 @@ class ImageController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth')->except('index', 'show');
     }
 
     /**
@@ -63,7 +63,7 @@ class ImageController extends Controller
         $image->user()->associate(auth()->user());
         $image->save();
 
-        return redirect()->route('images.index')->with('status', 'Sikeresen feltöltve');
+        return redirect()->route('images.index')->with('status', 'Successfully created');
     }
 
     /**
@@ -96,7 +96,7 @@ class ImageController extends Controller
         $image->name = $request->name;
         $image->save();
 
-        return redirect()->route('images.index')->with('status', 'Sikeresen frissítve!');
+        return redirect()->route('images.index')->with('status', 'Successfully uploded');
     }
 
     /**
@@ -111,6 +111,6 @@ class ImageController extends Controller
 
         $image->delete();
 
-        return redirect()->route('images.index')->with('status', 'Sikeresen törölve.');
+        return redirect()->route('images.index')->with('status', 'Successfully deleted');
     }
 }

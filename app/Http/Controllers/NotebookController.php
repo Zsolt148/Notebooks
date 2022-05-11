@@ -72,7 +72,7 @@ class NotebookController extends Controller
     {
         Notebook::create($request->validated());
 
-        return redirect()->route('notebooks.index')->with('status', 'Laptop sikeresen létrehozva');
+        return redirect()->route('notebooks.index')->with('status', 'Successfully created');
     }
 
     /**
@@ -100,7 +100,7 @@ class NotebookController extends Controller
     {
         $notebook->update($request->validated());
 
-        return redirect()->route('notebooks.index')->with('status', 'Laptop sikeresen frissítve');
+        return redirect()->route('notebooks.index')->with('status', 'Successfully updated');
     }
 
     /**
@@ -113,6 +113,6 @@ class NotebookController extends Controller
     {
         $notebook->delete();
 
-        return back()->with('status', 'Laptop sikeresen törölve');
+        return back()->with('status', 'Successfully deleted');
     }
 }

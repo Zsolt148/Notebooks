@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <a class="text-blue-500" href="{{ route('images.index') }}">Galléria</a> / Új Kép feltöltése
+            <a class="text-blue-500" href="{{ route('images.index') }}">Gallery</a> / New image
         </h2>
     </x-slot>
 
@@ -16,19 +16,19 @@
                         @csrf
                         @method('POST')
                         <div>
-                            <x-label for="name" value="Kép neve" />
+                            <x-label for="name" value="Name" />
 
                             <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" max="255" required autofocus />
                         </div>
 
                         <div class="mt-8">
-                            <x-label for="file" value="Kép fájl (jpg,png)" />
+                            <x-label for="file" value="Image (jpg,png)" />
 
                             <x-input id="file" class="block mt-1 w-full outline-none focus:outline-none" type="file" name="file" required accept="image/*"/>
                         </div>
 
                         <div class="mt-8">
-                            <x-button>Feltöltés</x-button>
+                            <x-button>Upload</x-button>
                         </div>
                     </form>
                 </div>

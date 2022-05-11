@@ -1,7 +1,7 @@
 <x-app-layout>
   <x-slot name="header">
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-          <a class="text-blue-500" href="{{ route('images.index') }}">Galléria</a> / <a class="text-blue-500" href="{{ route('images.show', $image) }}">{{ $image->name }}</a> / Kép szerkesztése
+          <a class="text-blue-500" href="{{ route('images.index') }}">Gallery</a> / <a class="text-blue-500" href="{{ route('images.show', $image) }}">{{ $image->name }}</a> / Edit image
       </h2>
   </x-slot>
 
@@ -16,7 +16,7 @@
                       @csrf
                       @method('PUT')
                       <div>
-                          <x-label for="name" value="Kép neve" />
+                          <x-label for="name" value="Name" />
 
                           <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="$image->name" max="255" required autofocus />
                       </div>
@@ -28,7 +28,7 @@
                       </div>
 
                       <div class="mt-8">
-                          <x-button>Frissítés</x-button>
+                          <x-button>Save</x-button>
                       </div>
                   </form>
               </div>

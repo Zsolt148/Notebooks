@@ -38,8 +38,8 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="p-5 pb-5 sm:px-10 bg-white border-b border-gray-200 text-xl">
-                        A galléria képfeltöltés funkcióját csak bejelentkezés után tudja használni!
-                        <a href="{{ route('login') }}" class="underline text-blue-500">Bejelentkezés</a>
+                        The gallery upload function can be only used with a logged in user
+                        <a href="{{ route('login') }}" class="underline text-blue-500">Login</a>
                     </div>
                 </div>
             </div>
@@ -56,16 +56,18 @@
                                 src="{{ \Illuminate\Support\Facades\Storage::url($image->file) }}">
                         </div>
                     </div>
-                    <div class="flex justify-evenly w-1/2 items-center" >
-                        <a href="{{ route('images.edit', $image) }}">
-                            <x-button class="bg-blue-400">Frissítés</x-button>
-                        </a>
-                        <form action="{{ route('images.destroy', $image) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <x-button class="bg-red-400">Törlés</x-button>
-                        </form>
-                    </div>
+                    @auth
+                        <div class="flex justify-evenly w-1/2 items-center" >
+                            <a href="{{ route('images.edit', $image) }}">
+                                <x-button class="bg-blue-400">Edit</x-button>
+                            </a>
+                            <form action="{{ route('images.destroy', $image) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <x-button class="bg-red-400">Delete</x-button>
+                            </form>
+                        </div>
+                    @endauth
                 </div>
             </div>
         </section>

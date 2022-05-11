@@ -13,24 +13,24 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        Kezdőlap
+                        Homepage
                     </x-nav-link>
                     <x-nav-link :href="route('notebooks.index')" :active="request()->routeIs('notebooks*')">
-                        Laptopok
+                        Notebooks
                     </x-nav-link>
                     <x-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')">
-                        Rólunk
+                        About us
                     </x-nav-link>
                     <x-nav-link :href="route('images.index')" :active="request()->routeIs('images*')">
-                        Galéria
+                        Gallery
                     </x-nav-link>
                     @guest
                         <x-nav-link :href="route('message.create')" :active="request()->routeIs('message.create')">
-                            Kapcsolat
+                            Contact
                         </x-nav-link>
                     @else
                         <x-nav-link :href="route('message.index')" :active="request()->routeIs('message.index')">
-                            Üzenetek
+                            Messages
                         </x-nav-link>
                     @endguest
                 </div>
@@ -59,7 +59,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                Kijelentkezés
+                                Logout
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -68,7 +68,7 @@
             @else
                 <div class="hidden space-x-8 sm:flex">
                     <x-nav-link :href="route('login')" :active="request()->routeIs('login')">
-                        Bejelentkezés
+                        Login
                     </x-nav-link>
                 </div>
             @endauth
@@ -89,27 +89,27 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                Kezdőlap
+                Homepage
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('notebooks.index')" :active="request()->routeIs('notebooks*')">
-                Laptopok
+                Notebooks
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('about-us')" :active="request()->routeIs('about-us')">
-                Rólunk
+                About us
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('images.index')" :active="request()->routeIs('images*')">
-                Galéria
+                Gallery
             </x-responsive-nav-link>
             @guest
                 <x-responsive-nav-link :href="route('message.create')" :active="request()->routeIs('message.create')">
-                    Kapcsolat
+                    Contact
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('login')" :active="request()->routeIs('login')">
-                    Bejelentkezés
+                    Login
                 </x-responsive-nav-link>
             @else
                 <x-responsive-nav-link :href="route('message.index')" :active="request()->routeIs('message.index')">
-                    Üzenetek
+                    Messages
                 </x-responsive-nav-link>
             @endguest
         </div>
@@ -138,7 +138,7 @@
                         <x-responsive-nav-link :href="route('logout')"
                                 onclick="event.preventDefault();
                                             this.closest('form').submit();">
-                            Kijelentkezés
+                            Logout
                         </x-responsive-nav-link>
                     </form>
                 </div>

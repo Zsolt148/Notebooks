@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Összes üzenet
+            All messages
         </h2>
     </x-slot>
 
@@ -42,11 +42,11 @@
                     <tr class="font-medium text-gray-700 dark:text-white text-left">
                         <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-tl-2xl">#ID</th>
                         <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Email</th>
-                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Küldő neve</th>
-                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Üzenet</th>
-                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Lakhely</th>
-                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Dátum</th>
-                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-tr-2xl">Műveletek</th>
+                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Name</th>
+                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Message</th>
+                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Country</th>
+                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700">Date</th>
+                        <th class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-tr-2xl">Actions</th>
                     </tr>
                     </thead>
                     <tbody class="text-sm font-normal text-gray-700">
@@ -56,7 +56,7 @@
                             <td class="px-4 py-2 dark:text-white">{{ $message->email }}</td>
                             <td class="px-4 py-2 dark:text-white">{{ $message->sent_by }}</td>
                             <td class="px-4 py-2 dark:text-white">{{ $message->text }}</td>
-                            <td class="px-4 py-2 dark:text-white">@if($message->location == 'hun') Mo. @else Más @endif</td>
+                            <td class="px-4 py-2 dark:text-white">@if($message->location == 'hun') HU. @else Other @endif</td>
                             <td class="px-4 py-2 dark:text-white">{{ $message->created_at->format('Y.m.d H:i') }}</td>
                             <td class="px-4 py-2 dark:text-white">
                                 {{-- <form class="inline-block" action="{{route('message.update', $message)}}" method="POST" >
@@ -68,20 +68,20 @@
                                     <form class="inline-block" action="{{route('message.update', $message)}}" method="POST">
                                         @csrf
                                         @method('PUT')
-                                        <x-button class="bg-blue-500" >Olvasottnak jelöl</x-button>
+                                        <x-button class="bg-blue-500">Mark as read</x-button>
                                     </form>
                                 @endif
                                 <form class="inline-block" action="{{route('message.destroy', $message)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <x-button class="bg-red-500" >Törlés</x-button>
+                                    <x-button class="bg-red-500" >Delete</x-button>
                                 </form>
 
                             </td>
                         </tr>
                     @empty
                         <tr class="bg-white py-10">
-                            <td colspan="7" class="px-4 py-5 dark:text-white text-lg">Nem jött még üzenet!</td>
+                            <td colspan="7" class="px-4 py-5 dark:text-white text-lg">No messages yet</td>
                         </tr>
                     @endforelse
                     </tbody>

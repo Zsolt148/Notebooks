@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Galléria
-            @auth - <a href="{{ route('images.create') }}" class="text-blue-500">Új Kép feltöltése</a> @endauth
+            Gallery
+            @auth - <a href="{{ route('images.create') }}" class="text-blue-500">Upload new image</a> @endauth
         </h2>
     </x-slot>
 
@@ -21,7 +21,7 @@
                         </div>
                         <div class="text-xl font-medium ml-3">{{session('status')}}</div>
                     </div>
-                    <div class="text-sm tracking-wide text-gray-600 dark:text-gray-200 mt-4 sm:mt-0 sm:ml-4">Köszönjük!
+                    <div class="text-sm tracking-wide text-gray-600 dark:text-gray-200 mt-4 sm:mt-0 sm:ml-4">Thank you!
                     </div>
                     <div class="absolute sm:relative sm:top-auto sm:right-auto ml-auto right-4 top-4 text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white cursor-pointer"
                         @click="open = false">
@@ -39,8 +39,8 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="p-5 pb-5 sm:px-10 bg-white border-b border-gray-200 text-xl">
-                        A galléria képfeltöltés funkcióját csak bejelentkezés után tudja használni!
-                        <a href="{{ route('login') }}" class="underline text-blue-500">Bejelentkezés</a>
+                        The gallery upload function can be only used with a logged in user
+                        <a href="{{ route('login') }}" class="underline text-blue-500">Login</a>
                     </div>
                 </div>
             </div>

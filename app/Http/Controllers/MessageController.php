@@ -60,19 +60,29 @@ class MessageController extends Controller
             'text' => $request->get('text')
         ]);
 
-        return redirect()->back()->with('status', 'Sikeresen elküldte üzenetét!');
+        return redirect()->back()->with('status', 'Successfully sent the message!');
     }
 
-    public function update(Message $message){
+    /**
+     * @param Message $message
+     * @return mixed
+     */
+    public function update(Message $message)
+    {
         $message->read = true;
         $message->save();
 
-        return back()->with('status', 'Olvasottnak jelölve!');
+        return back()->with('status', 'Successfully marked as read!');
     }
 
-    public function destroy(Message $message){
+    /**
+     * @param Message $message
+     * @return mixed
+     */
+    public function destroy(Message $message)
+    {
         $message->delete();
 
-        return back()->with('status', 'Sikeresen törölve!');
+        return back()->with('status', 'Successfully deleted!');
     }
 }

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            <a class="text-blue-500" href="{{ route('notebooks.index') }}">Laptopok</a> / Új laptop létrehozása
+            <a class="text-blue-500" href="{{ route('notebooks.index') }}">Notebooks</a> / New notebook
         </h2>
     </x-slot>
 
@@ -19,7 +19,7 @@
                         @include('notebooks.form')
 
                         <div class="mt-8">
-                            <x-button type="submit">Létrehozás</x-button>
+                            <x-button type="submit">Create</x-button>
                         </div>
                     </form>
                 </div>
