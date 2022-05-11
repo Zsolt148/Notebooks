@@ -160,14 +160,14 @@
                                     <td class="border-t dark:border-gray-400 flex space-x-2">
                                         <a href="{{ route('notebooks.edit', $notebook) }}">
                                             <x-button>
-                                                Szerk.
+                                                Edit
                                             </x-button>
                                         </a>
                                         <form action="{{ route('notebooks.destroy', $notebook) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <x-button type="submit" class="bg-red-400">
-                                                Törlés
+                                                Delete
                                             </x-button>
                                         </form>
                                     </td>
